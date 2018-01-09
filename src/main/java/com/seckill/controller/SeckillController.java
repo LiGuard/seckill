@@ -116,6 +116,12 @@ public class SeckillController {
     }
 
 
+    @ResponseBody
+    public void  demo1 (){
+
+    }
+
+
 
 
 }
