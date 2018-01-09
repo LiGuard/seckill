@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
-import sun.org.mozilla.javascript.internal.ast.TryStatement;
+
 
 import java.util.Date;
 import java.util.List;
@@ -115,7 +115,7 @@ public class SeckillServiceImpl implements SeckillService{
      * Date: 21:14 2018/1/5
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public SuccessExecution executeSeckill(long seckillId, long userPhone, String md5)
             throws SeckillException, RepeatKillException, SeckillCloseException {
         
