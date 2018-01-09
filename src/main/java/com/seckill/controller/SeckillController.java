@@ -7,7 +7,6 @@ import com.seckill.entity.Seckill;
 import com.seckill.enums.SeckillStatEnum;
 import com.seckill.exception.RepeatKillException;
 import com.seckill.exception.SeckillCloseException;
-import com.seckill.exception.SeckillException;
 import com.seckill.service.SeckillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -106,22 +105,5 @@ public class SeckillController {
         Date now = new Date();
         return new SeckillResult<Long>(true, now.getTime());
     }
-
-
-    @RequestMapping(value = "/demo", method = RequestMethod.GET,
-            produces = {"application/json;charset=UTF-8"})
-    @ResponseBody
-    public String demo(){
-        return "456是的电费所发生的";
-    }
-
-
-    @ResponseBody
-    public void  demo1 (){
-
-    }
-
-
-
 
 }
