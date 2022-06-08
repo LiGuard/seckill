@@ -40,6 +40,7 @@ public class SeckillController {
         return "list";
     }
 
+
     @RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
     public String detail(@PathVariable(value = "seckillId") Long seckillId, Model model){
         if(seckillId == null){
