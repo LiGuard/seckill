@@ -45,6 +45,7 @@ public class SeckillController {
     public String detail(@PathVariable(value = "seckillId") Long seckillId, Model model){
         if(seckillId == null){
             return "redirect:/seckill/list";
+
         }
         Seckill seckill = seckillService.querySeckillById(seckillId);
         if(seckill == null) {
