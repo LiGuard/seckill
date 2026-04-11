@@ -38,6 +38,7 @@ public class SeckillController {
         model.addAttribute("list", seckills);
 
         return "list";
+
     }
 
 
